@@ -42,7 +42,7 @@
 
           <div class="form-group col-md-3">
   <label for="status">Ativa</label><br>
-  <input type="checkbox" id="status" name="status"
+  <input type="checkbox" id="status" name="status" 
          ${retroescavadeira.status ? "checked" : ""}>
 </div>
 
@@ -68,7 +68,7 @@
         <hr />
         <div id="actions" class="row pull-right">
           <div class="col-md-12">
-            <a href="${pageContext.request.contextPath}/retroescavadeiras" class="btn btn-default">Cancelar</a>
+            <a href="${pageContext.request.contextPath}/retros" class="btn btn-default">Cancelar</a>
             <button type="submit" class="btn btn-primary">
               ${not empty retroescavadeira ? "Atualizar" : "Cadastrar"}
             </button>

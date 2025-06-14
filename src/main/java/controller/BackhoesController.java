@@ -166,7 +166,7 @@ public class BackhoesController extends HttpServlet {
     private void loadDataFromRequest(HttpServletRequest req, BackhoeLoader b) {
         String model = req.getParameter("model");
         int year = Integer.parseInt(req.getParameter("year"));
-        boolean status = Boolean.parseBoolean(req.getParameter("status"));
+        boolean status = "on".equals(req.getParameter("status"));
         int companyId = Integer.parseInt(req.getParameter("company"));
 
         Company company = new Company(companyId);
