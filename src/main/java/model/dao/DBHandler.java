@@ -72,6 +72,19 @@ public class DBHandler {
 			throw new ModelException("Erro ao atribuir inteiro", e);
 		}
 	}
+	
+	public void setBoolean(int i, boolean value) throws ModelException {
+		validatePreparedStatement();
+		
+		int finalValue = value ? 1 : 0;
+		
+		try {
+			preparedStatement.setInt(i, finalValue);
+		} catch (SQLException e) {
+			close();
+			throw new ModelException("Erro ao atribuir booleano", e);
+		}
+	}
 
 	public int executeUpdate() throws ModelException  {
 		validatePreparedStatement();
@@ -129,6 +142,17 @@ public class DBHandler {
 	public int getInt(String column) throws ModelException {
 		try {
 			return resultSet.getInt(column);
+		} catch (SQLException e) {
+			close();
+			throw new ModelException("Erro ao chamar getInt", e);
+		}
+	}
+	
+	public boolean getBoolean(String column) throws ModelException {
+		try {
+			int value = resultSet.getInt(column);
+			return value == 1 ? true : false;
+			
 		} catch (SQLException e) {
 			close();
 			throw new ModelException("Erro ao chamar getInt", e);

@@ -45,7 +45,7 @@
 		            <thead>
 		                <tr>
 		                    <th>Nome Fantasia</th>
-		                    <th>Razãao Social</th>
+		                    <th>Razão Social</th>
 		                    <th>CNPJ</th>
 		                    <th>Editar</th>
 		                    <th>Excluir</th>

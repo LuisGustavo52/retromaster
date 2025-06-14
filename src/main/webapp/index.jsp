@@ -34,16 +34,6 @@
 			        $("#alert").slideUp(500);
 			    }, 3000);
 			    
-			    // ao clicar no delete de algum post, pega o nome do usuário, 
-			    // o id do usuário e a ação (delete) e envia para o modal 
-			    $(".modal-remove").click(function () {
-		            var postContent = $(this).attr('post-content');
-		            var postId = $(this).attr('post-id');
-		            $(".modal-body #hiddenValue").text("o post '"+postContent+"'");
-		            $("#id").attr( "value", postId);
-		            $("#form").attr( "action","post/delete");
-		        })
-			});
 		</script>
 	</body>
 </html>
